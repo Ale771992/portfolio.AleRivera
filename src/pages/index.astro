@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import Header from "../components/header.astro";
+import Card from "../components/Card.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experiencie.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefCase from "../components/icons/briefCase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+  title="Portfolio de Alejandra Rivera - Desarrolladora y Programdora Web"
+  description="Desarrolladora y Programadora Web"
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-24">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, I'm Alejandra Rivera <a
+          href="https://www.linkedin.com/in/alejandra-rivera-montoya-260349b5/"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="flex justify-center items-center">
+            <Badge>Available for hire</Badge>
+          </div>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span class="text-yellow-200/90"
+          >Industrial Designer and Web Developer</span
+        >
+         from Laboratoria 💛 My experience on Laboratoria has been crucial to
+        shape my profesional identity and make stronger my capability of
+        adapting to changes. I stand out for my compromise with the continuos
+        learning, acquiring abilities like
+        <span class="text-yellow-200/90"
+          >JavaScript, HTML, CSS, Angular, Node.js and tools like GitHub and
+          Firebase
+        </span>
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap"></nav>
+      <SocialPill
+        href="https://www.linkedin.com/in/alejandra-rivera-montoya-260349b5/"
+      >
+        <LinkedInIcon class="w-6 h-6" />
+         LinkedIn
+      </SocialPill>
+      <SocialPill href="https://github.com/Ale771992">
+        <GitHubIcon class="w-6 h-6" />
+         GitHub
+      </SocialPill>
+      <SocialPill href="mailto:aleriverawebdev@gmail.com">
+        <MailIcon class="w-6 h-6" />
+         aleriverawebdev@gmail.com
+      </SocialPill>
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+        <BriefCase class="size-6" />
+         Experience
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+        <CodeIcon class="size-6" />
+         Projects
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>

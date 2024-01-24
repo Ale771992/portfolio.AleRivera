@@ -1,0 +1,35 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Working on it currently",
+    title: "The Sci-Fi Cinema Explorer",
+    description:
+      "Website intended to filter, order and view the movies in the catalog of The Movie Data Base page. The project is been developed with Angular along with the API of TMdb.",
+    link: "https://github.com/Ale771992/DEV010-movie-challenge-fw",
+  },
+  {
+    date: "November 2023",
+    title: "MD-links",
+    description:
+      "Library developed in Node.js that is intended to analyze the links found within Mardown files. The files that the library can read must have one of the following extensions: .md, .mkd, .mdwn, .mdown, .mdtxt, .mdtext, .markdown, .text.",
+    link: "https://github.com/Ale771992/DEV010-md-links/tree/main",
+  },
+  {
+    date: "HerCode",
+    title: "E-Commerce UI code in Tailwind CSS",
+    description:
+      "Get started with dozens of web components and interactive elements built on top of Tailwind CSS.",
+    }
+]; 
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

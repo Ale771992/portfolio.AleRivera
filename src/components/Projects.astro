@@ -1,0 +1,45 @@
+---
+import HTMLicon from "./icons/HTML.astro";
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-[#003159] text-white",
+    icon: HTMLicon,
+  },
+};
+const PROJECTS = [
+  {
+    title: "The Sci-Fi Movie Explorer",
+    description:
+      "Website intended to filter, order and view the movies in the catalog of The Movie Data Base page. The project is been developed with Angular along with the API of TMdb.",
+    link: "#",
+    Github: "#",
+    image: "/public/projects/movie_challenge.webp",
+    tags: [TAGS.HTML],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-2`}>
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2x1 shadow-white/20"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
