@@ -3,7 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import Header from "../components/header.astro";
-import Card from "../components/Card.astro";
 import SocialPill from "../components/SocialPill.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import MailIcon from "../components/icons/Mail.astro";
@@ -20,7 +19,7 @@ import Projects from "../components/Projects.astro";
 >
   <main class="px-4">
     <SectionContainer class="py-44 pb-24">
-      <h1
+      <h1 id="about"
         class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
         Hey, I'm Alejandra Rivera <a
@@ -48,9 +47,9 @@ import Projects from "../components/Projects.astro";
       </h2>
 
       <nav class="flex gap-4 mt-8 flex-wrap"></nav>
+    <SectionContainer id="contact">
       <SocialPill
-        href="https://www.linkedin.com/in/alejandra-rivera-montoya-260349b5/"
-      >
+        href="https://www.linkedin.com/in/alejandra-rivera-montoya-260349b5/">
         <LinkedInIcon class="w-6 h-6" />
          LinkedIn
       </SocialPill>
@@ -62,6 +61,7 @@ import Projects from "../components/Projects.astro";
         <MailIcon class="w-6 h-6" />
          aleriverawebdev@gmail.com
       </SocialPill>
+      </SectionContainer>
     </SectionContainer>
     <SectionContainer id="experience">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
